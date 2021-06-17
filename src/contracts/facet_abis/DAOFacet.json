@@ -303,17 +303,36 @@
       {
         "indexed": true,
         "internalType": "address",
-        "name": "previousGameManager",
+        "name": "gameManager_",
         "type": "address"
       },
       {
         "indexed": true,
+        "internalType": "uint256",
+        "name": "limit_",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "refreshTime_",
+        "type": "uint256"
+      }
+    ],
+    "name": "GameManagerAdded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
         "internalType": "address",
-        "name": "newGameManager",
+        "name": "gameManager_",
         "type": "address"
       }
     ],
-    "name": "GameManagerTransferred",
+    "name": "GameManagerRemoved",
     "type": "event"
   },
   {
@@ -503,6 +522,24 @@
       }
     ],
     "name": "addCollateralTypes",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "_newGameManagers",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_limits",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "addGameManagers",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -861,13 +898,38 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "gameManager",
-    "outputs": [
+    "inputs": [
       {
         "internalType": "address",
-        "name": "",
+        "name": "_manager",
         "type": "address"
+      }
+    ],
+    "name": "gameManagerBalance",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_manager",
+        "type": "address"
+      }
+    ],
+    "name": "gameManagerRefreshTime",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -895,6 +957,25 @@
     "inputs": [
       {
         "internalType": "address",
+        "name": "_manager",
+        "type": "address"
+      }
+    ],
+    "name": "isGameManager",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
         "name": "_to",
         "type": "address"
       },
@@ -910,6 +991,19 @@
       }
     ],
     "name": "mintItems",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "_gameManagers",
+        "type": "address[]"
+      }
+    ],
+    "name": "removeGameManagers",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -941,19 +1035,6 @@
       }
     ],
     "name": "setDao",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_gameManager",
-        "type": "address"
-      }
-    ],
-    "name": "setGameManager",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
