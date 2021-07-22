@@ -7,7 +7,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["es2015", "dom"],
-    "noImplicitAny": true,
+    //"noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
     "removeComments": true,
     "allowUnreachableCode": false
@@ -15,6 +15,7 @@
   "include": [
     "./dist/*",
     "./src/*",
-    "./src/contracts/facet_abis/*.json"
+    "./src/contracts/facet_abis/*.json",
+    "./typechain/"
   ]
 }
