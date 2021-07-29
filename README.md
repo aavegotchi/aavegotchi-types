@@ -11,10 +11,13 @@ Clone this repo and try the [`demo`](./demo/index.ts) with: `cd demo/ && yarn &&
 To install in a Node.js project: `yarn add @aavegotchi/sdk`.
 
 ### Typescript
+
 ```ts
-import aavegotchiSdk from "@aavegotchi/sdk"
+import aavegotchiSdk from "@aavegotchi/sdk";
 ```
+
 ### Javascript
+
 ```js
 const aavegotchiSdk = require("@aavegotchi/sdk");
 ```
@@ -44,5 +47,7 @@ Returns a dictionary of ethers.Contract named for each facet. [Related](https://
 # External
 
 <https://docs.aavegotchi.com>
+
+<https://louper.dev/?address=0x86935F11C86623deC8a25696E1C19a8659CbF95d&network=polygon>
 
 <https://thegraph.com/explorer/subgraph/aavegotchi/aavegotchi-core-matic?version=current>

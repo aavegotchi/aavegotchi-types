@@ -1,15 +1,15 @@
 import "@typechain/hardhat";
 import "@nomiclabs/hardhat-ethers";
-import "hardhat-abi-exporter";
+// import "hardhat-abi-exporter";
 
 module.exports = {
-  abiExporter: {
-    path: "./src/contracts/facet_abis/",
-    clear: true,
-    flat: true,
-    only: ["Facet$"],
-    spacing: 2,
-  },
+  // abiExporter: {
+  //   path: "./src/contracts/facet_abis/",
+  //   clear: true,
+  //   flat: true,
+  //   only: ["Facet$"],
+  //   spacing: 2,
+  // },
   paths: {
     sources: "./src/contracts/aavegotchi-contracts/contracts",
     cache: "./cache",
