@@ -12,5 +12,5 @@
     "removeComments": true,
     "allowUnreachableCode": false
   },
-  "include": ["./dist/*", "./src/*", "./typechain/"]
+  "include": ["./dist/*", "./src/*", "./typechain/*"]
 }
