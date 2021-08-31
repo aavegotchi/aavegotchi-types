@@ -1,6 +1,6 @@
 {
   "name": "@aavegotchi/sdk",
-  "version": "1.0.0-5a",
+  "version": "1.0.0-8a",
   "description": "an awesome aavegotchi library with Typescript support!",
   "main": "dist/src/index.js",
   "types": [
@@ -12,7 +12,7 @@
     "test": "ts-mocha test/test.ts",
     "update-facets": "rm -rf typechain && git submodule foreach git pull origin master && yarn hardhat clean && yarn hardhat compile && bash scripts/clean.sh",
     "update-graphql": "rm -rf dist gen && yarn graphql-codegen && tsc -P .",
-    "bundle": "yarn update-facets && yarn update-graphql && yarn pack",
+    "bundle": "yarn update-facets && yarn update-graphql && cp $(ls typechain/*.d.ts) dist/typechain/ && yarn pack",
     "release": "yarn bundle && yarn publish"
   },
   "repository": {
@@ -22,26 +22,26 @@
   "author": "Pixelcraft Studios",
   "license": "TBD",
   "dependencies": {
-    "ethers": "^5.4.4",
-    "graphql": "^15.5.1",
+    "ethers": "^5.4.6",
+    "graphql": "^15.5.2",
     "graphql-request": "^3.5.0",
     "graphql-tag": "^2.12.5"
   },
   "files": [
-    "dist/**/*"
+    "dist/"
   ],
   "devDependencies": {
-    "@ethersproject/abi": "^5.4.0",
+    "@ethersproject/abi": "^5.4.1",
     "@ethersproject/bytes": "^5.4.0",
-    "@ethersproject/providers": "^5.4.3",
-    "@graphql-codegen/cli": "^2.0.1",
-    "@graphql-codegen/graphql-modules-preset": "^2.0.1",
-    "@graphql-codegen/typescript": "^2.0.0",
-    "@graphql-codegen/typescript-generic-sdk": "^2.0.0",
-    "@graphql-codegen/typescript-graphql-request": "^4.0.0",
-    "@graphql-codegen/typescript-operations": "^2.0.1",
-    "@graphql-codegen/typescript-react-query": "^2.0.0",
-    "@graphql-codegen/typescript-resolvers": "^2.0.0",
+    "@ethersproject/providers": "^5.4.5",
+    "@graphql-codegen/cli": "^2.1.1",
+    "@graphql-codegen/graphql-modules-preset": "^2.1.2",
+    "@graphql-codegen/typescript": "^2.1.2",
+    "@graphql-codegen/typescript-generic-sdk": "^2.1.2",
+    "@graphql-codegen/typescript-graphql-request": "^4.1.2",
+    "@graphql-codegen/typescript-operations": "^2.1.2",
+    "@graphql-codegen/typescript-react-query": "^2.1.2",
+    "@graphql-codegen/typescript-resolvers": "^2.1.2",
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@typechain/ethers-v5": "^7.0.1",
@@ -51,14 +51,14 @@
     "@types/mocha": "^9.0.0",
     "@types/require-dir": "^1.0.2",
     "chai": "^4.3.4",
-    "hardhat": "^2.6.0",
-    "hardhat-abi-exporter": "^2.2.1",
+    "hardhat": "^2.6.2",
+    "hardhat-abi-exporter": "^2.3.0",
     "hardhat-typechain": "^0.3.5",
     "ts-generator": "^0.1.1",
     "ts-mocha": "^8.0.0",
-    "ts-node": "^10.2.0",
+    "ts-node": "^10.2.1",
     "typechain": "^5.1.2",
-    "typescript": "^4.3.5"
+    "typescript": "^4.4.2"
   },
   "homepage": "https://github.com/aavegotchi/aavegotchi-sdk",
   "bugs": {
