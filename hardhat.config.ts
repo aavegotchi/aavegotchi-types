@@ -11,7 +11,7 @@ module.exports = {
   //   spacing: 2,
   // },
   paths: {
-    sources: "./src/contracts/aavegotchi-contracts/contracts",
+    sources: "./src/contracts/**/contracts",
     cache: "./cache",
     artifacts: "./artifacts",
   },
@@ -19,6 +19,9 @@ module.exports = {
     compilers: [
       {
         version: "0.8.1",
+      },
+      {
+        version: "0.7.6",
       },
       {
         version: "0.7.4",
