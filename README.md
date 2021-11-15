@@ -1,48 +1,95 @@
 # aavegotchi-sdk 👻📦
 
-** Currently in alpha stage and subject to breaking changes **
+Node.js client for Aaveotchi subgraphs and contracts on Polygon mainnet!
 
-A Node.js package for type-safe definitions using the Aavegotchi subgraph and Polygon contracts.
+[![NPM Version](https://img.shields.io/npm/v/@aavegotchi/sdk)](https://www.npmjs.com/package/@aavegotchi/sdk)
 
-Clone this repo and try the [`demo`](./demo/index.ts) with: `cd demo/ && yarn && yarn test`
+## Table of content
+
+- [Features](#features)
+- [**Install**](#install)
+- [Usage](#usage)
+- [Get Help](#get-help)
+- [External](#external)
+
+# Features
+
+- Ready for regular Javacript and browser environments
+- Convienient bundle of official addresses / subgraphs
+- No-frills setup with `ethers` or `web3`
+- GraphQL client for querying Aavegotchi subgraphs
+- Full developer-friendly TypeScript support
+
+# Install
+
+Add to a Node.js project with `npm` or `yarn`
+
+- Browser demo on Codesandbox
+
+```sh
+$ npm install @aavegotchi/sdk
+# or
+$ yarn add @aavegotchi/sdk
+```
 
 # Usage
 
-To install in a Node.js project: `yarn add @aavegotchi/sdk`.
+### Subgraph Data
 
-### Typescript
 ```ts
-import aavegotchiSdk from "@aavegotchi/sdk"
+import { graphql } from "@aavegotchi/sdk";
+const chainId = 137;
+const urls = graphql.urls.diamond[chainId];
+const client = graphql.client();
+
+const main = () => {
+  const userAddress = "0xfffffffffffffffffffffffffffffff";
+  const res = await client(`{
+    aavegotchis(first: 500, where: {
+      owner: ${userAdd}
+    }) {
+      id
+      name
+    }
+  }`);
+  console.log(res);
+};
+
+main();
 ```
-### Javascript
-```js
-const aavegotchiSdk = require("@aavegotchi/sdk");
+
+### On-Chain Data
+
+Token information of a user.
+
+```ts
+import {
+  AavegotchiFacet__factory,
+  getDefaultProvider,
+  contracts,
+} from "@aavegotchi/sdk";
+const chainId = 137;
+const diamond = contracts.addresses[chainId];
+const provider = getDefaultProvider();
+const aavegotchiFacet = AavegotchiFacet__factory.connect(diamond, provider);
+
+const main = () => {
+  console.log(aavegotchiFacet);
+  const tokensOfOwner = await;
+};
+
+main();
 ```
 
-### Contracts
+# Get Help
 
-#### `aavegotchiSdk.contracts`
-
-`diamond()` => [ethers.Contract](https://docs.ethers.io/v5/api/contract/contract/)
-
-Returns an ethers.Contract with all functions of every facet exposed.
-
-`facets()` => { [facetName]: ethers.Contract }
-
-Returns a dictionary of ethers.Contract named for each facet. [Related](https://docs.aavegotchi.com/overview/facets)
-
-### GraphQL
-
-#### `aavegotchiSdk.graphql`
-
-`url()` => [`https://api.thegraph.com/subgraphs/name/aavegotchi/aavegotchi-core-matic`](https://api.thegraph.com/subgraphs/name/aavegotchi/aavegotchi-core-matic)
-
-`client()` => [graphql-request.GraphQLClient](https://www.npmjs.com/package/graphql-request#examples)
-
-`defaultSdk()` => a set of some common functions
+- For support reach out in [Discord](https://discord.com/invite/aavegotchi)
+- For issues in the package open an [issue on GitHub](https://github.com/aavegotchi/aavegotchi-sdk/issues/new)
 
 # External
 
 <https://docs.aavegotchi.com>
+
+<https://louper.dev/?address=0x86935F11C86623deC8a25696E1C19a8659CbF95d&network=polygon>
 
 <https://thegraph.com/explorer/subgraph/aavegotchi/aavegotchi-core-matic?version=current>

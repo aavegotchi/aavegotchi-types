@@ -1,21 +1,18 @@
 {
   "compilerOptions": {
+    "incremental": true,
     "module": "commonjs",
     "target": "es6",
     "declaration": true,
-    "outDir": "./dist",
+    "outDir": "dist",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["es2015", "dom"],
     //"noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
     "removeComments": true,
-    "allowUnreachableCode": false
+    "allowUnreachableCode": false,
+    "typeRoots": ["./dist/typechain"]
   },
-  "include": [
-    "./dist/*",
-    "./src/*",
-    "./src/contracts/facet_abis/*.json",
-    "./typechain/"
-  ]
+  "include": ["./dist/*", "./src/*", "./dist/typechain/*"]
 }

@@ -1,3 +1,6 @@
 [submodule "src/contracts/aavegotchi-contracts"]
 	path = src/contracts/aavegotchi-contracts
 	url = https://github.com/aavegotchi/aavegotchi-contracts
+[submodule "src/contracts/ghst-staking"]
+	path = src/contracts/ghst-staking
+	url = https://github.com/aavegotchi/ghst-staking
