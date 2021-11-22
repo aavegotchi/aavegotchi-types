@@ -1,8 +1,12 @@
 # Changelog
 
+## 1.0.0-11a
+
+- Realm diamond types
+
 ## 1.0.0-10a
 
-- GhstStaking types
+- Ghst staking types
 
 ## 1.0.0-2a
 
@@ -14,4 +18,4 @@
 
 ## 1.0.0-1a
 
-- 
+-
