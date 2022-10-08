@@ -1,9 +1,20 @@
 [submodule "src/contracts/aavegotchi-contracts"]
 	path = src/contracts/aavegotchi-contracts
 	url = https://github.com/aavegotchi/aavegotchi-contracts
+	branch = master
 [submodule "src/contracts/ghst-staking"]
 	path = src/contracts/ghst-staking
 	url = https://github.com/aavegotchi/ghst-staking
+	branch = master
 [submodule "src/contracts/aavegotchi-realm"]
 	path = src/contracts/aavegotchi-realm
 	url = https://github.com/aavegotchi/aavegotchi-realm-diamond
+	branch = master
+[submodule "src/contracts/aavegotchi-gbm-baazaar"]
+	path = src/contracts/aavegotchi-gbm-baazaar
+	url = https://github.com/aavegotchi/aavegotchi-gbm-baazaar
+	branch = main
+[submodule "src/contracts/fake-gotchis"]
+	path = src/contracts/fake-gotchis
+	url = https://github.com/aavegotchi/fake-gotchis
+	branch = main

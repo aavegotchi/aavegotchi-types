@@ -33,10 +33,10 @@ function defaultSdk(arg?: GraphQLClient) {
   } else return sdk.getSdk(arg);
 }
 
-export default {
-  subgraphs,
+export {
+  // subgraphs,
   client,
   getBlock,
-  defaultSdk,
-  ...defaultSdk(),
+  // defaultSdk,
+  // ...defaultSdk(),
 };
