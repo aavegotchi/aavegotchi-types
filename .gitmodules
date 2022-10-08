@@ -7,3 +7,9 @@
 [submodule "src/contracts/aavegotchi-realm"]
 	path = src/contracts/aavegotchi-realm
 	url = https://github.com/aavegotchi/aavegotchi-realm-diamond
+[submodule "src/contracts/aavegotchi-gbm-baazaar"]
+	path = src/contracts/aavegotchi-gbm-baazaar
+	url = https://github.com/aavegotchi/aavegotchi-gbm-baazaar
+[submodule "src/contracts/fake-gotchis"]
+	path = src/contracts/fake-gotchis
+	url = https://github.com/aavegotchi/fake-gotchis

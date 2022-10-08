@@ -1,8 +1,28 @@
+# aavegotchi-sdk
+
+A TypeScript/JavaScript client for Aavegotchi ecosystem contracts.
+
 # Changelog
+
+## 1.0.0-15a
+
+- FAKE Gotchis diamond types
+
+## 1.0.0-14a
+
+- Aavegotchi GBM diamond types
+
+## 1.0.0-13a
+
+- Aavegotchi Baazaar revenue sharing types
+
+## 1.0.0-12a
+
+- Aavegotchi Verse Tiles types
 
 ## 1.0.0-11a
 
-- Realm diamond types
+- Aavegotchi Verse Installations types
 
 ## 1.0.0-10a
 
@@ -10,12 +30,8 @@
 
 ## 1.0.0-2a
 
-### package.contracts
-
-- Facets found at docs.aavegotchi.com/ are now expos
-
-###
+- Aavegotchi diamond types
 
 ## 1.0.0-1a
 
--
+- init
