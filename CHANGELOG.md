@@ -4,6 +4,11 @@ A TypeScript/JavaScript client for Aavegotchi ecosystem contracts.
 
 # Changelog
 
+## 1.0.0-16a
+
+- forge build
+- Aavegotchi GLTR Farm diamond types
+
 ## 1.0.0-15a
 
 - FAKE Gotchis diamond types
