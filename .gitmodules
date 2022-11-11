@@ -18,3 +18,6 @@
 	path = src/contracts/fake-gotchis
 	url = https://github.com/aavegotchi/fake-gotchis
 	branch = main
+[submodule "src/contracts/aavegotchi-alchemia-gax"]
+	path = src/contracts/aavegotchi-alchemia-gax
+	url = https://github.com/aavegotchi/aavegotchi-alchemica-gax

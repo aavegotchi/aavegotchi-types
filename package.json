@@ -1,6 +1,6 @@
 {
   "name": "@aavegotchi/sdk",
-  "version": "1.0.0-15a",
+  "version": "1.0.0-15a-1",
   "description": "an awesome aavegotchi typescript client for TypeScript/JavaScript!",
   "main": "dist/src/index.js",
   "types": [

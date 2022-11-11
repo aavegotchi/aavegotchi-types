@@ -1,7 +1,7 @@
-schema: https://api.thegraph.com/subgraphs/name/aavegotchi/aavegotchi-core-matic?version=current
+schema: https://api.thegraph.com/subgraphs/name/aavegotchi/aavegotchi-core-matic
 generates:
   ./gen/:
-    documents: src/graphql/schema/*.graphql
+    # documents: src/graphql/schema/*.graphql
     preset: graphql-modules
     presetConfig:
       baseTypesPath: gen.ts

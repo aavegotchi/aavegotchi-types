@@ -8,6 +8,7 @@ const recompile = [
   "aavegotchi-gbm-baazaar",
   "ghst-staking",
   "fake-gotchis",
+  "aavegotchi-alchemica-gax",
 ];
 
 module.exports = {
@@ -19,7 +20,7 @@ module.exports = {
   //   spacing: 2,
   // },
   paths: {
-    sources: `./src/contracts/aavegotchi-realm/contracts`,
+    sources: `./src/contracts/${recompile.join(",")}/contracts`,
     cache: "./cache",
     artifacts: "./artifacts",
   },
