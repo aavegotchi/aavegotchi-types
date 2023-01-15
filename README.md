@@ -79,6 +79,10 @@ const main = () => {
 main();
 ```
 
+# Adding Contracts
+
+To add new contracts, simply add the contract info to the .gitmodules file and recompile using `npx hardhat compile`. If there are no errors during compilation, the contract is ready to be added.
+
 # Get Help
 
 - For support reach out in [Discord](https://discord.com/invite/aavegotchi)
