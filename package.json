@@ -74,6 +74,7 @@
     "url": "https://github.com/aavegotchi/aavegotchi-sdk/issues"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "@aavegotchi:registry": "https://npm.pkg.github.com"
   }
 }
