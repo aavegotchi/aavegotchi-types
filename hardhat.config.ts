@@ -7,7 +7,7 @@ const recompile = [
   "aavegotchi-contracts",
   "aavegotchi-gbm-baazaar",
   "ghst-staking",
-  "fake-gotchis",
+  // "fake-gotchis",
 ];
 
 module.exports = {
@@ -18,19 +18,32 @@ module.exports = {
   //   only: ["Facet$"],
   //   spacing: 2,
   // },
-  paths: {
-    sources: `./src/contracts/fake-gotchis/contracts`,
-    cache: "./cache",
-    artifacts: "./artifacts",
-  },
+  // paths: {
+  //   sources: `./src/contracts/fake-gotchis/contracts`,
+  //   cache: "./cache",
+  //   artifacts: "./artifacts",
+  // },
   typechain: {
     target: "ethers-v5",
     outDir: "typechain/",
     alwaysGenerateOverloads: true,
-    // externalArtifacts: ["facet_abis/*.json"],
+
+    // externalArtifacts: ["src/contracts/*.json"],
+  },
+  paths: {
+    sources: "./src",
   },
   solidity: {
     compilers: [
+      {
+        version: "0.8.1",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
       {
         version: "0.8.13",
         settings: {
@@ -51,6 +64,24 @@ module.exports = {
       },
       {
         version: "0.7.4",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+      {
+        version: "0.7.6",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+      {
+        version: "0.8.10",
         settings: {
           optimizer: {
             enabled: true,

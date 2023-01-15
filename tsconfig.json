@@ -12,5 +12,11 @@
     "removeComments": true,
     "allowUnreachableCode": false
   },
-  "include": ["./dist/*", "./src/*", "./dist/typechain/*"]
+  "include": [
+    "./dist/*",
+    "./src/*",
+    "./dist/typechain/*",
+    "contracts",
+    "graphql"
+  ]
 }
