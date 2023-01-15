@@ -1,6 +1,6 @@
 {
   "name": "@pixelcraftstudios/aavegotchi-types",
-  "version": "1.0.1-c",
+  "version": "1.0.1-d",
   "description": "Types for Aavegotchi contracts and subgraphs",
   "main": "dist/src/index.js",
   "types": [
@@ -15,7 +15,7 @@
     "update-submodules": "git submodule update --recursive --init && git submodule foreach --recursive git pull origin master --recurse-submodules && yarn",
     "update-typechain": "yarn typechain 'abi/**/*.json' --target ethers-v5 --out-dir typechain --always-generate-overloads && bash scripts/clean.sh",
     "bundle": "cp $(ls typechain/*.ts) dist/typechain/ && yarn pack",
-    "release": "yarn bundle && yarn publish"
+    "release": "yarn bundle && yarn tsc && yarn publish"
   },
   "repository": {
     "type": "git",
