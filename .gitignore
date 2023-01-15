@@ -2,7 +2,6 @@ node_modules/
 yarn-error.log
 graphQueries.tsx
 *.tgz
-dist/*.js
 blank_demo/
 *.bak
 *.lock
@@ -10,7 +9,6 @@ src/*.js
 schema/staging
 scripts/
 gen/
-dist/
 secret.*
 docs/*.md
 *.wip
