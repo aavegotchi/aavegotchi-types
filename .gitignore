@@ -15,4 +15,3 @@ docs/*.md
 *.log
 cache/
 artifacts/
-typechain/
