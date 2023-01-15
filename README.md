@@ -1,8 +1,6 @@
-# aavegotchi-sdk 👻📦
+# aavegotchi-types 👻📦
 
-Node.js client for Aaveotchi subgraphs and contracts on Polygon mainnet!
-
-[![NPM Version](https://img.shields.io/npm/v/@aavegotchi/sdk)](https://www.npmjs.com/package/@aavegotchi/sdk)
+Typechain and GraphQL types for all the Aavegotchi contracts and subgraphs! Import into your dapp for an effortless Aavegotchi dev experience.
 
 ## Table of content
 
@@ -27,9 +25,9 @@ Add to a Node.js project with `npm` or `yarn`
 - Browser demo on Codesandbox
 
 ```sh
-$ npm install @aavegotchi/sdk
+$ npm install @pixelcraftstudios/aavegotchi-types
 # or
-$ yarn add @aavegotchi/sdk
+$ yarn add @pixelcraftstudios/aavegotchi-types
 ```
 
 # Usage
@@ -37,7 +35,7 @@ $ yarn add @aavegotchi/sdk
 ### Subgraph Data
 
 ```ts
-import { graphql } from "@aavegotchi/sdk";
+import { graphql } from "@pixelcraftstudios/aavegotchi-types";
 const chainId = 137;
 const urls = graphql.urls.diamond[chainId];
 const client = graphql.client();
@@ -67,7 +65,7 @@ import {
   AavegotchiFacet__factory,
   getDefaultProvider,
   contracts,
-} from "@aavegotchi/sdk";
+} from "@pixelcraftstudios/aavegotchi-types";
 const chainId = 137;
 const diamond = contracts.addresses[chainId];
 const provider = getDefaultProvider();
@@ -84,7 +82,7 @@ main();
 # Get Help
 
 - For support reach out in [Discord](https://discord.com/invite/aavegotchi)
-- For issues in the package open an [issue on GitHub](https://github.com/aavegotchi/aavegotchi-sdk/issues/new)
+- For issues in the package open an [issue on GitHub](https://github.com/aavegotchi/aavegotchi-types/issues/new)
 
 # External
 
