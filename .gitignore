@@ -16,3 +16,4 @@ docs/*.md
 cache/
 artifacts/
 dist/
+dist/*.js
